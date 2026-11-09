@@ -48,7 +48,6 @@ def bfs(graph, start, target):
     
     return []
 
-
 # ============================================================================
 # PART 2: DEPTH-FIRST SEARCH (DFS)
 # ============================================================================
@@ -74,12 +73,12 @@ def dfs(graph, start):
     while stack:
         current_user = stack.pop()
         
-    if current_user not in visited:
-        visited.add(current_user)
+        if current_user not in visited:
+            visited.add(current_user)
             
-        for friend in graph[current_user]:
-            if friend not in visited:
-                stack.append(friend)
+            for friend in graph[current_user]:
+                if friend not in visited:
+                    stack.append(friend)
     
     return visited
 
